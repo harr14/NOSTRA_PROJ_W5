@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nostra - Modern Fashion Clothing Store">
+    <title>Nostra - Fashion Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Offer Bar -->
+    <div class="offer-bar" id="offerBar">
+        <div class="offer-content">
+            <p>Sign Up and GET <strong>20% OFF</strong> on your first Order</p>
+            <button id="offerClose" aria-label="Close offer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">NOSTRA</a>
+        </div>
+
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <div class="shop-menu">
+                <button class="shop-button">
+                    Shop <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="shop-dropdown">
+                    <a href="#">Men</a>
+                    <a href="#">Women</a>
+                    <a href="#">Children</a>
+                </div>
+            </div>
+            <a href="#best-sellers">Best Sellers</a>
+            <a href="#new-arrivals">New Arrivals</a>
+            <a href="#trending">Trending</a>
+        </nav>
+
+        <div class="nav-right">
+            <div class="nav-search">
+                <input type="text" id="navSearch" placeholder="Search products..." autocomplete="off">
+                <button id="searchButton" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <a href="#" class="cart-icon" aria-label="Shopping cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </a>
+
+            <button class="menu-button" id="menuButton" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <div class="mobile-shop">
+            <button id="mobileShopButton">
+                Shop <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="mobile-shop-links" id="mobileShopLinks">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Children</a>
+            </div>
+        </div>
+        <a href="#best-sellers">Best Sellers</a>
+        <a href="#new-arrivals">New Arrivals</a>
+        <a href="#trending">Trending</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-image">
+                <img id="heroImage" src="./img/mark-broadhead-woY16fVpZ6s-unsplash.jpg" alt="Nostra Summer Collection">
+            </div>
+            <div class="hero-content">
+                <p class="hero-small-text">NEW SEASON</p>
+                <h1>Level Up Your Style<br>With Our Summer<br>Collections</h1>
+                <p class="hero-description">
+                    Discover fresh styles, modern essentials and timeless pieces made for your everyday look.
+                </p>
+                <a href="#new-arrivals" class="primary-button">
+                    Shop Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="hero-arrow hero-next" id="heroNext" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="hero-dots">
+                <button class="hero-dot active" data-slide="0"></button>
+                <button class="hero-dot" data-slide="1"></button>
+                <button class="hero-dot" data-slide="2"></button>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="brands-section">
+            <div class="section-title">
+                <p>TRUSTED BRANDS</p>
+                <h2>Brands</h2>
+            </div>
+            <div class="brands-container">
+                <div class="brand-card">
+                    <img src="./img/amin-zabardast-43RdmYPpvjw-unsplash.jpg" alt="Chanel">
+                    <h3>Chanel</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/jk.ck.jpg" alt="Calvin Klein">
+                    <h3>Calvin Klein</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/images.jpg" alt="Guess">
+                    <h3>Guess</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/gucci.jpg" alt="Gucci">
+                    <h3>Gucci</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/adidas.jpg" alt="Adidas">
+                    <h3>Adidas</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/levi's.jpg" alt="Levi's">
+                    <h3>Levi's</h3>
+                </div>
+                <div class="brand-card">
+                    <img src="./img/versace.jpg" alt="Versace">
+                    <h3>Versace</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="experience-section">
+            <div class="experience-heading">
+                <div>
+                    <p>WHY SHOP WITH US?</p>
+                    <h2>We Provide Best<br>Customer Experiences.</h2>
+                </div>
+                <p class="experience-description">
+                    We ensure that our customers have the best shopping experience from browsing to delivery.
+                </p>
+            </div>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h3>Original Products</h3>
+                    <p>We provide authentic products from trusted brands and guarantee product originality.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Satisfaction Guarantee</h3>
+                    <p>Exchange your purchase easily if the product does not fit or meet your expectations.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <h3>New Arrival Everyday</h3>
+                    <p>Discover fresh styles and new collections added regularly.</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Fast & Free Shipping</h3>
+                    <p>Enjoy fast delivery and free shipping on selected orders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curated Picks -->
+        <section class="curated-section">
+            <div class="section-title">
+                <p>EXPLORE OUR COLLECTION</p>
+                <h2>Curated Picks</h2>
+            </div>
+            <div class="curated-container">
+                <a href="#best-sellers" class="curated-card">
+                    <img src="./img/jk.ck.jpg" alt="Best Seller">
+                    <div class="curated-overlay">
+                        <span>COLLECTION</span>
+                        <h3>Best Seller</h3>
+                        <p>Shop Collection <i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="curated-card">
+                    <img src="./img/adidas.jpg" alt="Men">
+                    <div class="curated-overlay">
+                        <span>COLLECTION</span>
+                        <h3>Shop Men</h3>
+                        <p>Explore <i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="curated-card">
+                    <img src="./img/levi's.jpg" alt="Women">
+                    <div class="curated-overlay">
+                        <span>COLLECTION</span>
+                        <h3>Shop Women</h3>
+                        <p>Explore <i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="curated-card">
+                    <img src="./img/curateimg.jpg" alt="Accessories">
+                    <div class="curated-overlay">
+                        <span>COLLECTION</span>
+                        <h3>Accessories</h3>
+                        <p>Explore <i class="fa-solid fa-arrow-right"></i></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="products-section" id="new-arrivals">
+            <div class="products-heading">
+                <div>
+                    <p>JUST IN</p>
+                    <h2>New Arrivals</h2>
+                </div>
+                <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card" data-name="Classic Casual Shirt" data-price="1499">
+                    <div class="product-image">
+                        <img src="./img/mark-broadhead-woY16fVpZ6s-unsplash.jpg" alt="Classic Casual Shirt">
+                        <span class="product-badge">NEW</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">MEN</p>
+                        <h3>Classic Casual Shirt</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price"><span>₹1,499</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Floral Summer Dress" data-price="1899">
+                    <div class="product-image">
+                        <img src="./img/amin-zabardast-43RdmYPpvjw-unsplash.jpg" alt="Floral Summer Dress">
+                        <span class="product-badge">NEW</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">WOMEN</p>
+                        <h3>Floral Summer Dress</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price"><span>₹1,899</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Relaxed Fit T-Shirt" data-price="999">
+                    <div class="product-image">
+                        <img src="./img/gucci.jpg" alt="Relaxed Fit T-Shirt">
+                        <span class="product-badge">NEW</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">MEN</p>
+                        <h3>Relaxed Fit T-Shirt</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <div class="product-price"><span>₹999</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Minimal Linen Top" data-price="1199">
+                    <div class="product-image">
+                        <img src="./img/images.jpg" alt="Minimal Linen Top">
+                        <span class="product-badge">NEW</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">WOMEN</p>
+                        <h3>Minimal Linen Top</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price"><span>₹1,199</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Most Wanted -->
+        <section class="products-section most-wanted-section" id="best-sellers">
+            <div class="products-heading">
+                <div>
+                    <p>CUSTOMER FAVOURITES</p>
+                    <h2>Most Wanted</h2>
+                </div>
+                <a href="#">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="product-grid">
+                <article class="product-card" data-name="Oversized Summer Shirt" data-price="1299">
+                    <div class="product-image">
+                        <img src="./img/jk.ck.jpg" alt="Oversized Summer Shirt">
+                        <span class="product-badge sale-badge">SALE</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">MEN</p>
+                        <h3>Oversized Summer Shirt</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price">
+                            <span>₹1,299</span>
+                            <del>₹1,699</del>
+                        </div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Elegant Blazer" data-price="2499">
+                    <div class="product-image">
+                        <img src="./img/versace.jpg" alt="Elegant Blazer">
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">WOMEN</p>
+                        <h3>Elegant Blazer</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price"><span>₹2,499</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Essential T-Shirt" data-price="799">
+                    <div class="product-image">
+                        <img src="./img/levi2.jpg" alt="Essential T-Shirt">
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">MEN</p>
+                        <h3>Essential T-Shirt</h3>
+                        <div class="product-rating">★★★★☆</div>
+                        <div class="product-price"><span>₹799</span></div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-name="Classic Women's Shirt" data-price="1499">
+                    <div class="product-image">
+                        <img src="./img/images.jpg" alt="Classic Women's Shirt">
+                        <span class="product-badge sale-badge">SALE</span>
+                        <button class="wishlist-button" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">WOMEN</p>
+                        <h3>Classic Women's Shirt</h3>
+                        <div class="product-rating">★★★★★</div>
+                        <div class="product-price">
+                            <span>₹1,499</span>
+                            <del>₹1,999</del>
+                        </div>
+                        <button class="add-cart-button">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Trending -->
+        <section class="trending-section" id="trending">
+            <div class="trending-image">
+                <img src="./img/trendy.jpg" alt="Trending Fashion">
+            </div>
+            <div class="trending-content">
+                <p>TRENDING NOW</p>
+                <h2>Find Your<br>New Style</h2>
+                <p>Explore our latest collection of styles selected for the season.</p>
+                <a href="#new-arrivals" class="primary-button">
+                    Explore Trending <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Limited Offer -->
+        <section class="limited-offer">
+            <div class="limited-offer-content">
+                <p>LIMITED OFFER</p>
+                <h2>35% OFF<br>This Friday</h2>
+                <p>Shop selected styles and receive a special gift with your order.</p>
+                <a href="#best-sellers" class="offer-button">
+                    Grab It Now <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="limited-offer-image">
+                <img src="./img/limitoff.jpg" alt="Limited Time Offer">
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="newsletter-content">
+                <p>STAY UPDATED</p>
+                <h2>Subscribe To Our Newsletter</h2>
+                <p>Get updates about our latest collections, exclusive discounts and special offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <small id="newsletterMessage"></small>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>NOSTRA</h2>
+                <p>Nostra brings together modern fashion, timeless styles and everyday essentials for every generation.</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Shop</h3>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Children</a>
+                <a href="#new-arrivals">New Arrivals</a>
+                <a href="#best-sellers">Best Sellers</a>
+            </div>
+            <div class="footer-column">
+                <h3>Information</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Service</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Size Guide</a>
+                <a href="#">Order Tracking</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Nostra. All Rights Reserved.</p>
+            <p>Designed for educational and portfolio purposes.</p>
+        </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <button id="closeSearch" class="close-search" aria-label="Close search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2>Search Products</h2>
+            <div class="large-search-box">
+                <input type="text" id="largeSearchInput" placeholder="Search for products...">
+                <button id="largeSearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <p>Start typing to search products.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Product added to cart</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
